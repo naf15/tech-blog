@@ -19,8 +19,8 @@ User.init(
             allowNull: false,
             unique: true,
             validate: {
-                isEmail: true
-            }
+                isEmail: true,
+            },
         },
         password: {
             type: DataTypes.STRING,
@@ -30,6 +30,20 @@ User.init(
                 len: [8],
             },
         },
+        // blog_post_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'blog_post',
+        //         key: 'id',
+        //     },
+        // },
+        // comment_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'comment',
+        //         key: 'id',
+        //     },
+        // },
     },
     {
         hooks: {
@@ -43,10 +57,10 @@ User.init(
             },
         },
         sequelize,
-        timestamps: false,
         freezeTableName: true,
+        underscored: true,
         modelName: 'user'
-    }
+    },
 );
 
 module.exports = User;
