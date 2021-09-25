@@ -9,9 +9,13 @@ BlogPost.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        Content: {
+        content: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        date: {
+            type: DataTypes.DATEONLY,
+            defaultValue: DataTypes.NOW
         },
         user_id: {
             type: DataTypes.INTEGER,
@@ -19,17 +23,11 @@ BlogPost.init(
                 model: 'user',
                 key: 'id',
             },
-        },
-        // comment_id : {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'comment',
-        //         key: 'id',
-        //     },
-        // },
+        }
     },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'blog_post'

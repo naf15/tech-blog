@@ -10,7 +10,13 @@ class User extends Model {
 
 User.init(
     {
-        name: {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        username: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -26,24 +32,9 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                isAlpha: true,
                 len: [8],
             },
         },
-        // blog_post_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'blog_post',
-        //         key: 'id',
-        //     },
-        // },
-        // comment_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'comment',
-        //         key: 'id',
-        //     },
-        // },
     },
     {
         hooks: {
@@ -57,6 +48,7 @@ User.init(
             },
         },
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'user'

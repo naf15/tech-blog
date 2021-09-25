@@ -1,0 +1,39 @@
+<div class="post">
+
+    {{#each blogPosts as |post|}}
+    
+    <div id="post-{{post.id}}">
+        <h2>{{post.title}}</h2>
+        <h2>{{post.date}}</h2>
+    </div>
+    {{ post.content }}
+    {{ post.date }}
+    {{ post.id }}
+    <h1>{{post.user.username}}</h1>
+
+    {{#each post.comments as |comment|}}
+    <div>
+        {{comment.user.username}}
+        {{comment.date}}
+        {{comment.body}}
+    </div>
+    {{/each}}
+
+    
+    <div>
+        <form id="form-{{post.id}}" style="display: none">
+            
+            <input type="text" id="comment-{{post.id}}">
+            <button>Submit</button>
+            {{!-- on submit change the content --}}
+        </form>
+    </div>
+
+
+    <button class="comment-button" data-id="{{post.id}}" data-comment-id="comment-{{post.id}}" data-form-id="form-{{post.id}}" >Add Comment</button>
+    {{!-- make form appear --}}
+    
+    {{!-- delete the post by id --}}
+    {{/each}}
+    <script src="./js/homepage.js"></script>
+</div>
