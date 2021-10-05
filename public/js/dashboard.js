@@ -29,7 +29,14 @@ const editPostHandler = (event) => {
   const formId = event.target.dataset.formId;
   const titleId = event.target.dataset.editTitle;
   const contentId = event.target.dataset.editContent;
-  const editForm = document.getElementById(formId)
+  const editForm = document.getElementById(formId);
+
+  console.log("EDIT");
+  console.log(formId);
+  console.log(titleId);
+  console.log(contentId);
+  console.log(editForm);
+  console.log(event);
   
   editForm.style.display = 'block'
 

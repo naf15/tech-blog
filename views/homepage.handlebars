@@ -24,6 +24,15 @@
             <button class="comment-button button is-primary" data-id="{{post.id}}" data-comment-id="comment-{{post.id}}" data-form-id="form-{{post.id}}" >Add Comment</button>
         </div>
 
+        
+        <form id="form-{{post.id}}" style="margin-bottom: 30px; display: none">
+            <div class="box is-flex is-flex-direction-column is-align-content-center is-justify-content-center">
+            <textarea class="textarea" style="margin-bottom:30px" id="comment-{{post.id}}" placeholder="e.g. Hello world"></textarea>
+            <button style="width: 140px;" class="button is-danger">Submit</button>
+            </div>
+        </form>
+        
+
 
 
     {{!-- <div id="post-{{post.id}}">
@@ -41,14 +50,9 @@
     {{!-- </div> --}}
   
     
-    <div>
-        <form id="form-{{post.id}}" style="display: none">
-            
-            <input type="text" id="comment-{{post.id}}">
-            <button class="button is-primary">Submit</button>
-            {{!-- on submit change the content --}}
-        </form>
-    </div>
+
+
+
 
 
     {{!-- <button class="comment-button button is-primary" data-id="{{post.id}}" data-comment-id="comment-{{post.id}}" data-form-id="form-{{post.id}}" >Add Comment</button> --}}
