@@ -20,7 +20,12 @@ router.get('/', async (req, res) => {
                     // attributes: ['name', 'email']
                 },
                 {
-                    model: Comment
+                    model: Comment,
+                    include: [
+                        {
+                            model: User
+                        }
+                    ]
                 }
 
             ]
@@ -75,12 +80,9 @@ router.get('/dashboard', withAuth, async (req,res) => {
                 user_id: req.session.user_id
             }
         })
-
-        console.log(dbUserPostsData)
         
         const userPosts = dbUserPostsData.map( post => post.get({ plain: true }));    
-        console.log(userPosts)
-
+        
         res.render('dashboard', {
             userPosts,
             loggedIn : req.session.logged_in

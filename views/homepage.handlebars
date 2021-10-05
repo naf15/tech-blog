@@ -1,40 +1,77 @@
-<div class="post">
+<div class="post box" style="padding:3%">
 
     {{#each blogPosts as |post|}}
-    
-    <div id="post-{{post.id}}">
+        <div class="box" id="post-{{post.id}}">
+            <article class="media">
+                <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                </figure>
+                </div>
+                <div class="media-content">
+                <div class="content">
+                    <p>
+                    <strong>{{post.title}}</strong> <small>@{{post.user.username}}</small> <small>{{post.date}}</small>
+                    <br>
+                    {{ post.content }}
+                    </p>
+                </div>
+                <nav class="level is-mobile">
+                    <div class="level-left">
+                    <a class="level-item" aria-label="reply">
+                        <span class="icon is-small">
+                        <i class="fas fa-reply" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a class="level-item" aria-label="retweet">
+                        <span class="icon is-small">
+                        <i class="fas fa-retweet" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a class="level-item" aria-label="like">
+                        <span class="icon is-small">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    </div>
+                </nav>
+                </div>
+            </article>
+            <button class="comment-button button is-primary" data-id="{{post.id}}" data-comment-id="comment-{{post.id}}" data-form-id="form-{{post.id}}" >Add Comment</button>
+        </div>
+
+
+
+    {{!-- <div id="post-{{post.id}}">
         <h2>{{post.title}}</h2>
         <h2>{{post.date}}</h2>
     </div>
     {{ post.content }}
     {{ post.date }}
     {{ post.id }}
-    <h1>{{post.user.username}}</h1>
-
-    {{#each post.comments as |comment|}}
-    <div>
-        {{comment.user.username}}
-        {{comment.date}}
-        {{comment.body}}
+    <h1>{{post.user.username}}</h1> --}}
+    <div class="box" style="margin-left:5%">
+        {{#each post.comments as |comment|}}
+            {{> comment-card}}
+        {{/each}}
     </div>
-    {{/each}}
-
+  
     
     <div>
         <form id="form-{{post.id}}" style="display: none">
             
             <input type="text" id="comment-{{post.id}}">
-            <button>Submit</button>
+            <button class="button is-primary">Submit</button>
             {{!-- on submit change the content --}}
         </form>
     </div>
 
 
-    <button class="comment-button" data-id="{{post.id}}" data-comment-id="comment-{{post.id}}" data-form-id="form-{{post.id}}" >Add Comment</button>
+    {{!-- <button class="comment-button button is-primary" data-id="{{post.id}}" data-comment-id="comment-{{post.id}}" data-form-id="form-{{post.id}}" >Add Comment</button> --}}
     {{!-- make form appear --}}
     
     {{!-- delete the post by id --}}
-    <form class="box">
+    {{!-- <form class="box">
         <div class="field">
             <label class="label">Title</label>
             <div class="control">
@@ -50,7 +87,7 @@
         </div>
 
         <button class="button is-primary">Submit</button>
-    </form>
+    </form> --}}
 
 
 
