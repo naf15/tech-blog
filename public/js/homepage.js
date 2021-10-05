@@ -4,12 +4,13 @@ const commentHandler = (event) => {
   const commentId = event.target.dataset.commentId;
   const blog_post_id = event.target.dataset.id;
 
-  const commentForm = document.getElementById(formId)
-  commentForm.style.display = 'block'
+  const commentForm = document.getElementById(formId);
+  commentForm.style.display = 'block';
   
   commentForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const body = document.getElementById(commentId).value.trim();
+    console.log(body)
 
     if (body) {
       const response = await fetch('/api/comments', {

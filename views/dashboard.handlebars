@@ -2,7 +2,7 @@
 
     {{#each userPosts as |post|}}
     <div class="is-flex is-flex-direction-column is-justify-content-space-between is-align-content-space-between">
-    <div class="notification is-info" id="post-{{post.id}}" >
+    <div class="box notification is-info" id="post-{{post.id}}" >
         <button class="delete delete-button" data-id="{{post.id}}"></button>
         <div class="is-flex is-flex-direction-column">
             <div class="is-flex is-justify-content-space-between">
@@ -33,7 +33,7 @@
         
       
     </div>
-    <button class="button is-warning edit-button" style="margin-bottom: 30px; width:70px" data-id="{{post.id}}" data-form-id="form-{{post.id}}" data-edit-title="post-{{post.id}}-title" data-edit-content="post-{{post.id}}-content">Edit Post</button>
+    <button class="button is-warning edit-button" style="margin-bottom: 30px; width:70px" data-id="{{post.id}}" data-form-id="form-{{post.id}}" data-edit-title="post-{{post.id}}-title" data-edit-content="post-{{post.id}}-content">Edit</button>
     {{!-- make form appear --}}
     </div>
 
