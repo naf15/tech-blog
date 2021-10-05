@@ -1,5 +1,5 @@
-<div>
-    <div class="box" style="margin:1%">
+
+    {{!-- <div class="box" style="margin:1%">
         <article class="media">
             <div class="media-left">
             <figure class="image is-64x64">
@@ -35,11 +35,15 @@
             </nav>
             </div>
         </article>
-    </div>
+    </div> --}}
     
-{{!--     
-    This is a comment
-    {{comment.user.username}}
-    {{comment.date}}
-    {{comment.body}} --}}
-</div>
+
+    <article class="message is-info box" style="margin-left:5%">
+        <div class="message-header">
+            <strong>@{{user.username}}</strong> <small>{{date}}</small>
+        </div>
+        <div class="message-body">
+            {{body}}
+        </div>
+    </article>
+
