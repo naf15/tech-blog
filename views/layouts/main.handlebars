@@ -5,21 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
-     <link rel="stylesheet" type="text/css" href="./css/jass.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Gemunu+Libre:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel='stylesheet' href='./css/style.css'>
-    {{!-- <link rel='stylesheet' href='./css/jass.css'> --}}
+    <link rel='stylesheet' href='./css/jass.css'>
 </head>
 <body>
-    <nav>
-        <a href="/">Homepage</a>
-        <a href="/dashboard">Dashboard</a>
-        {{#if loggedIn}} 
+    <nav style="background-color:rgba(240, 248, 255, 0)" class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div>
+        <p class="logo-font-1">TECH<span class="logo-font-2">blog</span></p>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+        <a class="navbar-item" href="/">
+            Homepage
+        </a>
+
+        <a class="navbar-item"href="/dashboard">
+            Dashboard
+        </a>
+        </div>
+        </div>
+
+        <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="buttons">
+            <a class="button is-danger is-rounded">
+                <strong>Sign up</strong>
+            </a>
+            {{#if loggedIn}}
+                <a class="button is-light is-rounded" href="" id='logout'>Logout</a>
+            {{else}} 
+                <a class="button is-light is-rounded" href="/login">
+                    Log in
+                </a>
+            {{/if}}
+            </div>
+        </div>
+        </div>
+    </div>
+    </nav>
+
+
+
+
+    {{!-- <nav>
+        
+     
         <a href="" id='logout'>Logout</a>
         {{else}}           
         <a href="/login">Login</a>
         {{/if}}
-    </nav>
+    </nav> --}}
     <h1>The Tech Blog</h1>
     <main>
         {{{ body }}}
@@ -27,6 +67,6 @@
      {{#if loggedIn}}
     <script src="../js/logout.js"></script>
     {{/if}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    {{!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> --}}
 </body>
 </html>
