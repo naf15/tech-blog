@@ -38,7 +38,13 @@ const editPostHandler = (event) => {
   console.log(editForm);
   console.log(event);
   
-  editForm.style.display = 'block'
+  if (editForm.style.display === 'block') {
+    editForm.style.display = 'none';
+    event.target.innerHTML = 'Edit';
+  } else {
+    editForm.style.display = 'block';
+    event.target.innerHTML = 'Hide';
+  };
 
   editForm.addEventListener('submit', async (event) => {
     event.preventDefault();

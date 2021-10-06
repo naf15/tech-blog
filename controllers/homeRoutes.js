@@ -9,15 +9,12 @@ const { BlogPost, Comment, User } = require('../models')
 router.get('/', async (req, res) => {
     try{
         const dbBlogPosts = await BlogPost.findAll({
+            order: [
+                ['date', 'DESC'],
+            ],
             include: [
-                // {
-                //     model: Comment,
-                //     attributes: ['body'],
-                    
-                // },
                 {
                     model: User,
-                    // attributes: ['name', 'email']
                 },
                 {
                     model: Comment,
@@ -25,9 +22,11 @@ router.get('/', async (req, res) => {
                         {
                             model: User
                         }
+                    ],
+                    order: [
+                        ['date', 'DESC']
                     ]
                 }
-
             ]
         })
         
@@ -44,31 +43,6 @@ router.get('/', async (req, res) => {
     };
 })
 
-
-// router.get('/', withAuth, async (req,res) => {
-//     try {
-//         const dbUserPostsData = await BlogPost.findAll({
-//             where:{
-//                 user_id: req.session.user_id
-//             }
-//         })
-
-//         console.log(dbUserPostsData)
-        
-//         const userPosts = dbUserPostsData.map( post => post.get({ plain: true }));    
-//         console.log(userPosts)
-
-//         res.render('homepage', {
-//             userPosts,
-//             loggedIn : req.session.logged_in
-//         })
-//     } catch(err) {
-//         console.log(err);
-//         res.status(500).json(err);
-//     };
-// });
-
-
 /*==================== 
 /dashboard
 ====================*/
@@ -78,7 +52,10 @@ router.get('/dashboard', withAuth, async (req,res) => {
         const dbUserPostsData = await BlogPost.findAll({
             where:{
                 user_id: req.session.user_id
-            }
+            },
+            order: [
+                ['date', 'DESC']
+            ]
         })
         
         const userPosts = dbUserPostsData.map( post => post.get({ plain: true }));    
