@@ -96,7 +96,7 @@ The following animation demonstrates the application functionality:
 
 ## Tech Stack
 
-![nodejs logo](./assets/images-tech/nodejs.png)
+![nodejs logo](./assets/images-tech/node-js.png)
 ![mysql logo](./assets/images-tech/mysql.png)
 ![rest logo](./assets/images-tech/restapi.png)
 
