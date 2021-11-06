@@ -97,6 +97,7 @@ The following animation demonstrates the application functionality:
 
 ![nodejs logo](./assets/images-tech/node-js.png)
 ![mysql logo](./assets/images-tech/mysql.png)
+![handlebars logo](./assets/images-tech/handlebars-js.png)
 ![rest logo](./assets/images-tech/restapi.png)
 
 
