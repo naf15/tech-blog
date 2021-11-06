@@ -8,14 +8,14 @@ This application provides the user a platform to communicate technology stories.
 
 ## Table of Content
 
-1. [Project Description](https://github.com/Brondchux/hw12-tech-blog#project-description)
-2. [Author Info](https://github.com/Brondchux/hw12-tech-blog#author-info)
-3. [User Story](https://github.com/Brondchux/hw12-tech-blog#user-story)
-4. [Acceptance Criteria](https://github.com/Brondchux/hw12-tech-blog#acceptance-criteria)
-5. [Mock-Up Preview](https://github.com/Brondchux/hw12-tech-blog#mock-up-preview)
-6. [Useful Links](https://github.com/Brondchux/hw12-tech-blog#useful-links)
-7. [Tech Stack](https://github.com/Brondchux/hw12-tech-blog#tech-stack)
-8. [License](https://github.com/Brondchux/hw12-tech-blog#license)
+1. [Project Description](https://github.com/Naf15/tech-blog#project-description)
+2. [Author Info](https://github.com/Naf15/tech-blog#author-info)
+3. [User Story](https://github.com/Naf15/tech-blog#user-story)
+4. [Acceptance Criteria](https://github.com/Naf15/tech-blog#acceptance-criteria)
+5. [Mock-Up Preview](https://github.com/Naf15/tech-blog#mock-up-preview)
+6. [Useful Links](https://github.com/Naf15/tech-blog#useful-links)
+7. [Tech Stack](https://github.com/Naf15/tech-blog#tech-stack)
+8. [License](https://github.com/Naf15/tech-blog#license)
 
 ---
 
@@ -83,7 +83,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 The following animation demonstrates the application functionality:
 
-![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./public/assets/images/tech-blog-demo.gif)
+![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./assets/images-tech/tech-blog-demo.gif)
 
 ---
 
@@ -96,9 +96,9 @@ The following animation demonstrates the application functionality:
 
 ## Tech Stack
 
-![nodejs logo](./public/assets/images/techs/nodejs.png)
-![mysql logo](./public/assets/images/techs/mysql.png)
-![npm logo](./public/assets/images/techs/npm.png)
+![nodejs logo](./assets/images-tech/nodejs.png)
+![mysql logo](./assets/images-tech/mysql.png)
+![rest logo](./assets/images-tech/restapi.png)
 
 ---
 
