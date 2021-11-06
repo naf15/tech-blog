@@ -1,4 +1,4 @@
-# Tech Blog
+# Tech Blog [![LICENSE](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
 
 ## Project Description
 
@@ -15,7 +15,6 @@ This application provides the user a platform to communicate technology stories.
 5. [Mock-Up Preview](https://github.com/Naf15/tech-blog#mock-up-preview)
 6. [Useful Links](https://github.com/Naf15/tech-blog#useful-links)
 7. [Tech Stack](https://github.com/Naf15/tech-blog#tech-stack)
-8. [License](https://github.com/Naf15/tech-blog#license)
 
 ---
 
@@ -100,9 +99,6 @@ The following animation demonstrates the application functionality:
 ![mysql logo](./assets/images-tech/mysql.png)
 ![rest logo](./assets/images-tech/restapi.png)
 
----
 
 
-## License
 
-[![LICENSE](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
